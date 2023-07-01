@@ -26,6 +26,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+
         {/* jhankar mahabub md-32-4 */}
 
         {/* <p>
@@ -94,7 +95,6 @@ function Adobe(props) {
 
       <h3>Adobe {name}</h3>
       <h4>Price: {price}</h4>
-
     </div>
   );
 }
