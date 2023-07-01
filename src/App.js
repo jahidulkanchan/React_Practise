@@ -17,11 +17,19 @@ function App() {
   //  let pakhiList = ['Beiman','Nisthor','Pasan'];
 
   // // jhankar mahabub md-32-7
-  const adobeList = [
-    { name: "Photoshop", price: "$234" },
-    { name: "Premier Pro", price: "$199" },
-    { name: "XD Lite", price: "$69" },
-  ];
+  // const adobeList = [
+  //   { name: "Photoshop", price: "$234" },
+  //   { name: "Premier Pro", price: "$199" },
+  //   { name: "XD Lite", price: "$69" },
+  // ];
+  // // jhankar mahabub md-32-8
+  // let pakhiList = ['Beiman','Nisthor','Pasani','kolar'];
+  // const adobeList = [
+  //   { name: "Photoshop", price: "$234" },
+  //   { name: "Premier Pro", price: "$199" },
+  //   { name: "XD Lite", price: "$69" },
+  //   { name: "Illustator", price: "$219" }
+  // ];
   return (
     <div className="App">
       <header className="App-header">
@@ -49,9 +57,36 @@ function App() {
         <Adobe name={adobeList[1].name} price={adobeList[1].price}></Adobe>
         <Adobe name={adobeList[2].name} price={adobeList[2].price}></Adobe> */}
         {/* Other Formula */}
-        <Adobe list={adobeList[0]}></Adobe>
+        {/* <Adobe list={adobeList[0]}></Adobe> */}
         {/* <Adobe list={adobeList[1]}></Adobe>
         <Adobe list={adobeList[2]}></Adobe> */}
+
+        {/* jhankar mahabub md-32-8 */}
+
+        {/* <h5>{
+          pakhiList.map(x=><p>{x}</p>)
+          }</h5> */}
+
+        {/* <h4>
+          {
+            adobeList.map(a=>{
+              const fancy = {
+                display: 'inline-block',
+                backgroundColor:'#000000',
+                margin: '10px 10px',
+                padding: '0px 10px',
+                border: '5px solid #00FF00'
+
+              };
+              return( 
+              <div style={fancy}>
+                  <p>Adobe {a.name}</p>
+                  <p>{a.price}</p>
+              </div>
+              )
+            } )
+          }
+        </h4> */}
       </header>
     </div>
   );
@@ -75,29 +110,28 @@ function App() {
 // }
 
 // {/* jhankar mahabub md-32-7 */}
-function Adobe(props) {
-  const styleAdobe = {
-    color: "cyan",
-    margin: "10px 0px 0px 0px",
-    padding: "30px",
-    lineHeight: "10px",
-    border: "1px solid white",
-  };
-  const{name,price} = props.list;
-  console.log('vvv')
-  return (
-    <div style={styleAdobe}>
-      {/* <h3>Adobe {props.name}</h3> */}
-      {/* <h3>Adobe {props.name}</h3>
-      <h4>Price: {props.price}</h4> */}
+// function Adobe(props) {
+//   const styleAdobe = {
+//     color: "cyan",
+//     margin: "10px 0px 0px 0px",
+//     padding: "30px",
+//     lineHeight: "10px",
+//     border: "1px solid white",
+//   };
+//   const { name, price } = props.list;
+//   return (
+//     <div style={styleAdobe}>
+//       {/* <h3>Adobe {props.name}</h3> */}
+//       {/* <h3>Adobe {props.name}</h3>
+//       <h4>Price: {props.price}</h4> */}
 
-      {/* Other Formula */}
+//       {/* Other Formula */}
 
-      <h3>Adobe {name}</h3>
-      <h4>Price: {price}</h4>
-    </div>
-  );
-}
+//       <h3>Adobe {name}</h3>
+//       <h4>Price: {price}</h4>
+//     </div>
+//   );
+// }
 
 // function Users(){
 //   fetch('https://jsonplaceholder.typicode.com/users')
