@@ -15,6 +15,13 @@ function App() {
 
   // // jhankar mahabub md-32-6
   //  let pakhiList = ['Beiman','Nisthor','Pasan'];
+
+  // // jhankar mahabub md-32-7
+  const adobeList = [
+    { name: "Photoshop", price: "$234" },
+    { name: "Premier Pro", price: "$199" },
+    { name: "XD Lite", price: "$69" },
+  ];
   return (
     <div className="App">
       <header className="App-header">
@@ -36,8 +43,14 @@ function App() {
         {/* <Players pakhiName = {pakhiList[0]} limit='kiso hobe na tor mone'></Players>
         <Players pakhiName = {pakhiList[1]} limit='kiso hobe na tor mone'></Players>
         <Players pakhiName = {pakhiList[2]} limit='kiso hobe na tor mone'></Players> */}
-        <Users></Users>
-
+        {/* <Users></Users> */}
+        {/* <Adobe name={adobeList[0].name} price={adobeList[0].price}></Adobe>
+        <Adobe name={adobeList[1].name} price={adobeList[1].price}></Adobe>
+        <Adobe name={adobeList[2].name} price={adobeList[2].price}></Adobe> */}
+        {/* Other Formula */}
+        <Adobe list={adobeList[0]}></Adobe>
+        {/* <Adobe list={adobeList[1]}></Adobe>
+        <Adobe list={adobeList[2]}></Adobe> */}
       </header>
     </div>
   );
@@ -56,19 +69,46 @@ function App() {
 //     <h3 style={{backgroundColor: 'green',padding:'10px 50px'}}>{props.limit}</h3> */}
 //     <h2 style={styleCss}>Hello {props.pakhiName} Pakhi</h2>
 //     <h3 style={{backgroundColor: 'green',padding:'10px 50px'}}>{props.limit}</h3>
-//     </div>  
+//     </div>
 //   )
 // }
-function Users(){
-  fetch('https://jsonplaceholder.typicode.com/users')
-  .then(res => res.json())
-  .then(data => {
-    return(
-      <div>
-        <h2>Hello {data.name} Pakhi</h2>
-      </div>
-    )
-  }
-  )
+
+// {/* jhankar mahabub md-32-7 */}
+function Adobe(props) {
+  const styleAdobe = {
+    color: "cyan",
+    margin: "10px 0px 0px 0px",
+    padding: "30px",
+    lineHeight: "10px",
+    border: "1px solid white",
+  };
+  const{name,price} = props.list;
+  console.log('vvv')
+  return (
+    <div style={styleAdobe}>
+      {/* <h3>Adobe {props.name}</h3> */}
+      {/* <h3>Adobe {props.name}</h3>
+      <h4>Price: {props.price}</h4> */}
+
+      {/* Other Formula */}
+
+      <h3>Adobe {name}</h3>
+      <h4>Price: {price}</h4>
+
+    </div>
+  );
 }
+
+// function Users(){
+//   fetch('https://jsonplaceholder.typicode.com/users')
+//   .then(res => res.json())
+//   .then(data => {
+//     return(
+//       <div>
+//         <h2>Hello {data.name} Pakhi</h2>
+//       </div>
+//     )
+//   }
+//   )
+// }
 export default App;
