@@ -1,5 +1,7 @@
+import React, {useState} from 'react';
 import logo from "./logo.svg";
 import "./App.css";
+
 
 function App() {
   // // jhankar mahabub md-32-4
@@ -30,6 +32,7 @@ function App() {
   //   { name: "XD Lite", price: "$69" },
   //   { name: "Illustator", price: "$219" }
   // ];
+
   return (
     <div className="App">
       <header className="App-header">
@@ -87,9 +90,28 @@ function App() {
             } )
           }
         </h4> */}
+
+        <Counter></Counter>
+        
       </header>
     </div>
   );
+}
+function Counter(){
+  const [count,setCount] = useState(1);
+  const decrease = ()=>{
+    if (count > 1) {
+      setCount(count-1)
+    }
+  };
+  return(
+    <div>
+      <h2>count: {count}</h2>
+      <button onClick={()=> setCount(count+1)}>Increment</button>
+      <button onClick={decrease}>Decrease</button>
+    </div>
+  )
+  
 }
 // jhankar mahabub md-32-5
 // function Players(props){
