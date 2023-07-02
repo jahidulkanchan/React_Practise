@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -37,7 +37,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-
         {/* jhankar mahabub md-32-4 */}
 
         {/* <p>
@@ -55,7 +54,7 @@ function App() {
         {/* <Players pakhiName = {pakhiList[0]} limit='kiso hobe na tor mone'></Players>
         <Players pakhiName = {pakhiList[1]} limit='kiso hobe na tor mone'></Players>
         <Players pakhiName = {pakhiList[2]} limit='kiso hobe na tor mone'></Players> */}
-        {/* <Users></Users> */}
+        
         {/* <Adobe name={adobeList[0].name} price={adobeList[0].price}></Adobe>
         <Adobe name={adobeList[1].name} price={adobeList[1].price}></Adobe>
         <Adobe name={adobeList[2].name} price={adobeList[2].price}></Adobe> */}
@@ -92,23 +91,12 @@ function App() {
         </h4> */}
         {/* jhankar mahabub md-32-10 */}
         {/* <Counter></Counter> */}
-        
+         {/* jhankar mahabub md-32-11 */}
+        {/* <Users></Users> */}
       </header>
     </div>
   );
 }
-  // /* jhankar mahabub md-32-10 */
-// function Counter(){
-//   const [count,setCount] = useState(1);
-//   // const decrease = ()=> (count > 1)? setCount(count-1): alert('It\'s Low You can\'t decrease any more');
-//   return(
-//     <div>
-//       <h2>count: {count}</h2>
-//       <button onClick={()=> setCount(count+1)}>Increment</button>
-//       <button onClick={()=> (count > 1)? setCount(count-1): alert('It\'s Low You can\'t decrease any more')}>Decrease</button>
-//     </div>
-//   ) 
-// }
 // jhankar mahabub md-32-5
 // function Players(props){
 //   let styleCss ={
@@ -151,16 +139,35 @@ function App() {
 //   );
 // }
 
+  // /* jhankar mahabub md-32-10 */
+
+// function Counter(){
+//   const [count,setCount] = useState(1);
+//   // const decrease = ()=> (count > 1)? setCount(count-1): alert('It\'s Low You can\'t decrease any more');
+//   return(
+//     <div>
+//       <h2>count: {count}</h2>
+//       <button onClick={()=> setCount(count+1)}>Increment</button>
+//       <button onClick={()=> (count > 1)? setCount(count-1): alert('It\'s Low You can\'t decrease any more')}>Decrease</button>
+//     </div>
+//   ) 
+// }
+  // /* jhankar mahabub md-32-11 */
 // function Users(){
-//   fetch('https://jsonplaceholder.typicode.com/users')
-//   .then(res => res.json())
-//   .then(data => {
-//     return(
-//       <div>
-//         <h2>Hello {data.name} Pakhi</h2>
-//       </div>
-//     )
-//   }
+//   const [users,setUsers]= useState([])
+//   useEffect(()=>{
+//     fetch('https://jsonplaceholder.typicode.com/users')
+//     .then(res => res.json())
+//     .then(data => setUsers(data))
+//   },[])
+//   return(
+//     <div>
+//       <h3>hello Pakhi</h3>
+//       {
+//         users.map(x=> <p>{x.name}</p>)
+//       }
+//     </div>
 //   )
+ 
 // }
 export default App;
