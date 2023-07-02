@@ -90,29 +90,25 @@ function App() {
             } )
           }
         </h4> */}
-
-        <Counter></Counter>
+        {/* jhankar mahabub md-32-10 */}
+        {/* <Counter></Counter> */}
         
       </header>
     </div>
   );
 }
-function Counter(){
-  const [count,setCount] = useState(1);
-  const decrease = ()=>{
-    if (count > 1) {
-      setCount(count-1)
-    }
-  };
-  return(
-    <div>
-      <h2>count: {count}</h2>
-      <button onClick={()=> setCount(count+1)}>Increment</button>
-      <button onClick={decrease}>Decrease</button>
-    </div>
-  )
-  
-}
+  // /* jhankar mahabub md-32-10 */
+// function Counter(){
+//   const [count,setCount] = useState(1);
+//   // const decrease = ()=> (count > 1)? setCount(count-1): alert('It\'s Low You can\'t decrease any more');
+//   return(
+//     <div>
+//       <h2>count: {count}</h2>
+//       <button onClick={()=> setCount(count+1)}>Increment</button>
+//       <button onClick={()=> (count > 1)? setCount(count-1): alert('It\'s Low You can\'t decrease any more')}>Decrease</button>
+//     </div>
+//   ) 
+// }
 // jhankar mahabub md-32-5
 // function Players(props){
 //   let styleCss ={
