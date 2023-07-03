@@ -4,6 +4,8 @@ import "./App.css";
 
 
 function App() {
+  const hackingTrack = ['apple','atirlce','dragon','tiger'];
+
   // // jhankar mahabub md-32-4
   // var heroDetails = {
   //   name: "jk_morga",
@@ -37,6 +39,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <BetCollect name={hackingTrack[0]}></BetCollect>
+        <BetCollect name={hackingTrack[1]}></BetCollect>
         {/* jhankar mahabub md-32-4 */}
 
         {/* <p>
@@ -96,6 +100,13 @@ function App() {
       </header>
     </div>
   );
+}
+function BetCollect(props){
+  return(
+    <div>
+      <h3>Hello {props.name} Tracer</h3>
+    </div>
+  )
 }
 // jhankar mahabub md-32-5
 // function Players(props){
