@@ -32,12 +32,29 @@ function App() {
   //   { name: "XD Lite", price: "$69" },
   //   { name: "Illustator", price: "$219" }
   // ];
-
+  // // jhankar mahabub md-33-10
+  // const studentList =['asad','rohan','shohel','roni'];
+  // const studentList =[
+  //   {name:'Asad',id:'211'},
+  //   {name:'Rohan',id:'231'},
+  //   {name:'Shohel',id:'271'},
+  // ];
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
+         {/* jhankar mahabub md-33-10 */}
+         {/* {
+          studentList.map(sList => <Student name={sList}></Student>)
+         } */}
+
+         {/* --------Other Formula for Array object------- */}
+         {/* {
+          studentList.map(sList=><Student name={sList.name} id={sList.id} key={sList.id}></Student>)
+         } */}
+        {/* --------Another Formula for Array object------- */}
+        <ApiUsers></ApiUsers>
         {/* jhankar mahabub md-32-4 */}
 
         {/* <p>
@@ -171,4 +188,32 @@ function App() {
 //   )
  
 // }
+// /* jhankar mahabub md-33-10 */
+// function Student(props){
+// return(
+//   <div>
+//     <h2>Hello {props.name}</h2>
+//     <h5>Your id {props.id}</h5>
+//   </div>
+// )
+// }
+
+
+// Api formula use  
+function ApiUsers(){
+  const [apiUsers, setApiUsers] = useState([])
+  useEffect(()=>{
+          fetch('https://jsonplaceholder.typicode.com/users')
+          .then(res => res.json())
+          .then(data => setApiUsers(data))
+        },[])
+  return(
+    <div>
+      {
+        apiUsers.map(ap => <li key={ap.id}>{ap.name}</li>)
+      }
+    </div>
+  )
+}
+
 export default App;
