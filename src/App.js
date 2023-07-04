@@ -157,7 +157,8 @@ function App() {
 //   );
 // }
 
-  // /* jhankar mahabub md-32-10 */
+// /* jhankar mahabub md-32-10 */
+// ------UseState use for number=(0) || for array = ([])------
 
 // function Counter(){
 //   const [count,setCount] = useState(1);
@@ -201,7 +202,9 @@ function App() {
 
 // Api formula use  
 function ApiUsers(){
-  const [apiUsers, setApiUsers] = useState([])
+  let [apiUsers, setApiUsers] = useState([])
+  // If you wanted to slice
+  apiUsers = apiUsers.slice(0,5)
   useEffect(()=>{
           fetch('https://jsonplaceholder.typicode.com/users')
           .then(res => res.json())
